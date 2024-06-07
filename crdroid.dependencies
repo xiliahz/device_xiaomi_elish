@@ -1,0 +1,14 @@
+[
+  {
+    "repository": "LineageOS/android_hardware_xiaomi",
+    "target_path": "hardware/xiaomi"
+  },
+  {
+    "repository": "xiliahz/android_vendor_xiaomi_elish",
+    "target_path": "vendor/xiaomi/elish",
+  },
+  {
+    "repository": "android_kernel_xiaomi_elish",
+    "target_path": "kernel/xiaomi/elish",
+  },
+]
