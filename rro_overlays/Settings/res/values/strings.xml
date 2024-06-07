@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="data_usage_app_summary_title">Wi‑Fi</string>
+    <string name="network_dashboard_summary_no_mobile">Wi‑Fi</string>
+    <string name="non_carrier_data_usage">Wi‑Fi data usage</string>
+    <string name="non_carrier_data_usage_warning" />
+</resources>
