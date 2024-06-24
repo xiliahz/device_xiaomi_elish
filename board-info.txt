@@ -1,0 +1,2 @@
+require version-baseband=2.0.c7-00282-SDX55_RMTEFS_PACK-1.23627.2
+require version-vendor=1715068105
