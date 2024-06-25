@@ -104,9 +104,11 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+#ELISH_PREBUILT := device/xiaomi/elish-prebuilt
+
 # Kernel
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/dtb.img:dtb.img
+#PRODUCT_COPY_FILES += \
+#    $(ELISH_PREBUILT)/dtb.img:dtb.img
 
 # Inherit from sm8250-common
 $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
