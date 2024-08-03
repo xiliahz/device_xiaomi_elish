@@ -1,0 +1,2 @@
+# 允许 hal_health_default 进程读取 sysfs 文件系统中的文件
+allow hal_health_default sysfs:file read;

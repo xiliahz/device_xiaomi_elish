@@ -14,6 +14,11 @@ $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@7.1-impl \
+    android.hardware.audio.effect@7.0-impl 
+    
 # Audio configs
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -21,6 +26,9 @@ PRODUCT_COPY_FILES += \
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1600
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bootanimation/bootanimation.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
 
 # Camera
 PRODUCT_COPY_FILES += \
@@ -33,13 +41,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/displayconfig/,$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig)
 
-# Fingerprint
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
-
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.xiaomi
-
+# Fastcharge
+# PRODUCT_PACKAGES += \
+#     vendor.lineage.fastcharge@1.0-service.xiaomi_sm8250
+    
 # GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1.vendor \
@@ -68,7 +73,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     NetworkStackOverlayElish
-
+    
 # Peripheral Manager
 PRODUCT_PACKAGES += \
     XiaomiPeripheralManager
@@ -114,3 +119,4 @@ PRODUCT_PACKAGES += \
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/elish/elish-vendor.mk)
+
