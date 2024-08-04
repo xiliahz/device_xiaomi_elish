@@ -1,0 +1,6 @@
+# Allow fingerprint service to use the fingerprint HAL
+allow fingerprintd hal_fingerprint_default:binder call;
+
+# Allow fingerprint service to read necessary directories and files
+allow fingerprintd hal_fingerprint_default:dir search;
+allow fingerprintd hal_fingerprint_default:file { read open };

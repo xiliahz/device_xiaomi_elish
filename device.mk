@@ -18,7 +18,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.1-impl \
     android.hardware.audio.effect@7.0-impl 
-    
+
 # Audio configs
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -72,7 +72,8 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
-    NetworkStackOverlayElish
+    NetworkStackOverlayElish \
+    FrameworksResOverlayElish
     
 # Peripheral Manager
 PRODUCT_PACKAGES += \
