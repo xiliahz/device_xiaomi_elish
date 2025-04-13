@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+DEVICE_PATH := device/xiaomi/elish
+
 # A/B
 TARGET_IS_VAB := true
 
@@ -11,7 +13,7 @@ TARGET_IS_VAB := true
 TARGET_IS_TABLET := true
 
 # Use prebuilt kernel
-TARGET_USE_PREBUILT_KERNEL := true
+# TARGET_USE_PREBUILT_KERNEL := true
 
 # Inherit from sm8250-common
 $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
@@ -89,6 +91,32 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel
 
+# TTF
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/ttf/zh-cn.ttf:$(TARGET_COPY_OUT_PRODUCT)/fonts/zh-cn.ttf
+    
+# WiFi
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.wifi.hostapd@1.2.vendor \
+    vendor.qti.hardware.wifi.supplicant@2.2.vendor 
+
+# ANT+
+PRODUCT_PACKAGES += \
+    AntHalService-Soong \
+    com.dsi.ant@1.0.vendor
+
+PRODUCT_PACKAGES += \
+    FossifyGallery \
+    Accord \
+    via \
+    Omni \
+    CameraGo
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/permissions/privapp-permissions-thirdparty.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-thirdparty.xml \
+    $(DEVICE_PATH)/sysconfig/thirdparty-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/thirdparty-hiddenapi-package-whitelist.xml \
+    $(DEVICE_PATH)/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
+    
 # Wlan fix for stock kernel
 ifeq ($(TARGET_USE_PREBUILT_KERNEL),true)
 PRODUCT_PACKAGES += \

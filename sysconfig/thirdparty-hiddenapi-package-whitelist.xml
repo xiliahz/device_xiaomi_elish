@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!-- Gramophone -->
+    <hidden-api-whitelisted-app package="org.akanework.gramophone"/>
+    <!-- RootExplorer -->
+    <hidden-api-whitelisted-app package="com.speedsoftware.rootexplorer"/>
+    <!-- Via -->
+    <hidden-api-whitelisted-app package="mark.via"/>
+</config>
