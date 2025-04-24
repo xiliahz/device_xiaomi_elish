@@ -51,3 +51,18 @@ android_app_import {
     ],
     product_specific: true,
 }
+
+android_app_import {
+    name: "Gramophone",
+    owner: "thirdparty",
+    apk: "Gramophone.apk",
+    preprocessed: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    overrides: [
+        "Music"
+    ],
+    product_specific: true,
+}

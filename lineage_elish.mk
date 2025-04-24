@@ -28,6 +28,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     RisingMaintainer="Xiliahz_(心凉患者)"
     
 TARGET_ENABLE_BLUR := true    
+WITH_GMS := true
+TARGET_CORE_GMS := true
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 

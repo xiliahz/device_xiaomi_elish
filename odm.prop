@@ -1,0 +1,8 @@
+# Bluetooth
+bluetooth.device.default_name=Xiaomi Pad 5 Pro
+
+# Marketname
+ro.product.marketname=Xiaomi Pad 5 Pro
+
+# USB
+vendor.usb.product_string=Xiaomi Pad 5 Pro
