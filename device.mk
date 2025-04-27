@@ -135,12 +135,15 @@ PRODUCT_PACKAGES += \
     Gramophone \
     via \
     Omni \
-    CameraGo
+    CameraGo \
+    TrichromeLibrary64 \
+    Chrome64
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/permissions/privapp-permissions-thirdparty.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-thirdparty.xml \
     $(DEVICE_PATH)/sysconfig/thirdparty-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/thirdparty-hiddenapi-package-whitelist.xml \
-    $(DEVICE_PATH)/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
+    $(DEVICE_PATH)/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml \
+    $(DEVICE_PATH)/permissions/privapp-permissions-google-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google-product.xml
     
 # Wlan fix for stock kernel
 ifeq ($(TARGET_USE_PREBUILT_KERNEL),true)

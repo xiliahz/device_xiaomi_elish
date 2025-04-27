@@ -62,7 +62,34 @@ android_app_import {
         enabled: false,
     },
     overrides: [
-        "Music"
+        "Music", "org.lineageos.twelve"
     ],
     product_specific: true,
 }
+
+android_app_import {
+	name: "Chrome64",
+	owner: "google",
+	apk: "Chrome64.apk",
+	overrides: ["Browser", "Browser2", "jelly"],
+	preprocessed: true,
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	product_specific: true,
+}
+
+
+android_app_import {
+	name: "TrichromeLibrary64",
+	owner: "google",
+	apk: "TrichromeLibrary64.apk",
+	preprocessed: true,
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	product_specific: true,
+}
+
