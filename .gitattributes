@@ -1,3 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+packages/Chrome64.apk filter=lfs diff=lfs merge=lfs -text
+packages/TrichromeLibrary64.apk filter=lfs diff=lfs merge=lfs -text
 *.apk filter=lfs diff=lfs merge=lfs -text
