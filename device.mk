@@ -28,6 +28,13 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
+# 闭源GPU驱动
+# PRODUCT_COPY_FILES += \
+#     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/vendor/lib/modules,$(TARGET_COPY_OUT_VENDOR)/lib/modules)
+    
+# BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules/modules.load))
+# BOARD_VENDOR_KERNEL_MODULES += $(wildcard $(LOCAL_PATH)/modules/*.ko)
+    
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1600
@@ -37,9 +44,6 @@ PRODUCT_PACKAGES += \
     libMegviiFacepp-0.5.2 \
     libmegface \
     libpiex_shim
-
-# Display config
-     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/displayconfig/,$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig)
      
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -166,6 +170,9 @@ PRODUCT_PACKAGES += \
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/elish/elish-vendor.mk)
+
+# JamesDSPManager
+$(call inherit-product, packages/apps/JamesDSPManager/config.mk)
 
 # ViPER4Android FX
 # $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
