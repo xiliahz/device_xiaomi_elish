@@ -22,15 +22,15 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := M2105K81AC
 
-RISING_MAINTAINER="Xiliahz_(心凉患者)"
+RISING_MAINTAINER="Xiliahz❤_(心凉患者)"
 PRODUCT_BUILD_PROP_OVERRIDES += \
     RisingChipset="Xiaomi Pad 5 Pro" \
-    RisingMaintainer="Xiliahz_(心凉患者)"
+    RisingMaintainer="Xiliahz❤_(心凉患者)"
     
-TARGET_ENABLE_BLUR := true    
+# TARGET_ENABLE_BLUR := true    
 WITH_GMS := true
 # TARGET_CORE_GMS := true
-TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+# TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
 TARGET_SUPPORTS_QUICK_TAP := false
 TARGET_INCLUDE_MATLOG := true
 TARGET_PREBUILT_BCR := false
