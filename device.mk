@@ -10,9 +10,6 @@ TARGET_IS_VAB := true
 # Is tablet
 TARGET_IS_TABLET := true
 
-# Use prebuilt kernel
-TARGET_USE_PREBUILT_KERNEL := true
-
 # Inherit from sm8250-common
 $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
 
@@ -54,10 +51,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.xiaomi_elish.peripherals@1.0-service.default
 
-ifneq ($(TARGET_USE_PREBUILT_KERNEL), true)
-$(call soong_config_set, xiaomi_elish_peripherals, stylus_use_old_driver, true)
-endif
-
 # Rootdir
 PRODUCT_PACKAGES += \
     init.elish.rc
@@ -85,13 +78,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel
-
-# Wlan fix for stock kernel
-ifeq ($(TARGET_USE_PREBUILT_KERNEL),true)
-PRODUCT_PACKAGES += \
-    firmware_qca6390_WCNSS_qcom_cfg.ini_symlink \
-    firmware_qca6390_wlan_mac.bin_symlink
-endif
 
 # Xiaomi Bluetooth
 PRODUCT_PACKAGES += \
