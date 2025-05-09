@@ -70,6 +70,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
+# Packages
+PRODUCT_PACKAGES += \
+    CameraGo 
+    
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
