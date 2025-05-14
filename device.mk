@@ -48,7 +48,8 @@ PRODUCT_COPY_FILES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1.vendor
+    android.hardware.gnss@2.1.vendor \
+    BaiduNetworkLocation
 
 # Parts
 PRODUCT_PACKAGES += \
