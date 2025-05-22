@@ -21,11 +21,6 @@ PRODUCT_DEVICE := elish
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := M2105K81AC
-
-RISING_MAINTAINER="Xiliahz❤_(心凉患者)"
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    RisingChipset="Xiaomi Pad 5 Pro" \
-    RisingMaintainer="Xiliahz❤_(心凉患者)"
     
 # TARGET_ENABLE_BLUR := true    
 WITH_GMS := true
