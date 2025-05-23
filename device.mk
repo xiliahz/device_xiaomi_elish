@@ -10,6 +10,9 @@ TARGET_IS_VAB := true
 # Is tablet
 TARGET_IS_TABLET := true
 
+# Use prebuilt kernel
+TARGET_USE_PREBUILT_KERNEL := true
+
 # Inherit from sm8250-common
 $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
 
@@ -62,6 +65,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.elish.rc
 
+# ForceRotation
+PRODUCT_PACKAGES += \
+    ForceRotation
+    
 # RRO Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlayElish \
@@ -93,6 +100,10 @@ PRODUCT_SOONG_NAMESPACES += \
 # Xiaomi Bluetooth
 PRODUCT_PACKAGES += \
     XiaomiTWS
+
+ifneq ($(TARGET_USE_PREBUILT_KERNEL), true)
+$(call soong_config_set, xiaomi_elish_peripherals, stylus_use_old_driver, true)
+endif
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/elish/elish-vendor.mk)

@@ -1,20 +1,24 @@
-# android_device_xiaomi_elish
+Copyright (C) 2025 LineageOS
 
-Xiaomi Pad 5 Pro (elish) Device Tree for Android 14 LineageOS 21.0
+Device configuration for Xiaomi Mi Pad 5 Pro (elish)
+=========================================
 
-## How to flash
+The Xiaomi Mi Pad 5 Pro (codenamed _"elish"_) is a tablet from Xiaomi.
 
-You will lose all user data after flashing LineageOS. Remember to back it up in a safe place. I warned you.
-   
-1. Unlock your bootloader & Flash HyperOS 1.0.2.0.TKYCNXM first
-2. Download boot.img vendor_boot.img and lineage-version-code-UNOFFICIAL-elish.zip from GitHub release
-3. Reboot to bootloader mode, flash boot and vendor_boot by `fastboot flash boot boot.img && fastboot flash vendor_boot vendor_boot.img`
-4. Reboot to recovery mode, do Factory reset, click "Apply update -> Apply from ADB" and `adb sideload lineage-<version code>-UNOFFICIAL-elish.zip`
-5. Reboot
+It was released in August 2021.
 
-## Screenshots
+## Device specifications
 
-![Launcher](.assets/launcher.png)
-![SystemUI](.assets/systemui.png)
-![About Device](.assets/about-device.png)
+Basic   | Spec Sheet
+-------:|:-------------------------
+SoC     | Qualcomm SM8250-AC Snapdragon 870 5G (7 nm)
+CPU     | Octa-core (1x3.2 GHz Kryo 585 & 3x2.42 GHz Kryo 585 & 4x1.80 GHz Kryo 585)
+GPU     | Adreno 650
+Memory  | 128GB 6GB RAM, 256GB 6GB RAM, 256GB 8GB RAM
+Shipped Android Version | Android 11, MIUI 12.5
+Battery | Li-Po 8600 mAh, non-removable
+Display | IPS LCD, 1B colors, 120Hz, HDR10, Dolby Vision
 
+## Device picture
+
+![Xiaomi Mi Pad 5 Pro](https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1640768539.98629966.jpg "Xiaomi Mi Pad 5 Pro")
