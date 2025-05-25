@@ -65,10 +65,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.elish.rc
 
-# ForceRotation
-PRODUCT_PACKAGES += \
-    ForceRotation
-    
 # RRO Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlayElish \
