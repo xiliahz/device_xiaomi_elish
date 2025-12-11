@@ -1,0 +1,11 @@
+android_app_import {
+	name: "GCamGOPrebuilt-V4",
+	apk: "GCamGOPrebuilt-V4.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+	overrides: ["Camera2", "GCamGOPrebuilt", "GCamGOPrebuilt-V2", "GCamGOPrebuilt-V3", "GCamGOPrebuilt-V3_8", "Snap", "Aperture", "GoogleCamera"],
+    product_specific: true,
+}

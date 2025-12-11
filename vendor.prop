@@ -73,3 +73,7 @@ ro.vendor.camera.legacy_torch_strength_config=0|/sys/class/leds/led:torch_0/max_
 
 # Wi-Fi
 ro.boot.wificountrycode=CN
+
+# Lunaris AOSP
+persist.sys.perf.scroll_opt=true
+persist.sys.perf.scroll_opt.heavy_app=2

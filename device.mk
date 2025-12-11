@@ -46,6 +46,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-aosp
+
+# Packages
+PRODUCT_PACKAGES += \
+    GCamGOPrebuilt-V4
+
 # Parts
 PRODUCT_PACKAGES += \
     MiPadParts
